@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Evento Especial - Puerto Alexa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555555;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            border-color: #66afe9;
+            outline: none;
+        }
+
+        .summary {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .summary h3 {
+            margin-top: 0;
+            color: #333333;
+        }
+
+        .summary p {
+            margin: 5px 0;
+        }
+
+        .summary p.total-price {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-actions .confirm-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .form-actions .back-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .form-actions .back-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .form-actions .confirm-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Detalles del Evento</h2>
+        <div class="form-group">
+            <label for="fecha_evento">Fecha del Evento</label>
+            <input type="date" id="fecha_evento" name="fecha_evento">
+        </div>
+        <div class="form-group">
+            <label for="hora_evento">Hora del Evento</label>
+            <input type="time" id="hora_evento" name="hora_evento">
+        </div>
+        <div class="form-group">
+            <label for="lugar">Lugar</label>
+            <input type="text" id="lugar" name="lugar">
+        </div>
+        <div class="form-group">
+            <label for="num_asistentes">Número de Asistentes</label>
+            <input type="number" id="num_asistentes" name="num_asistentes">
+        </div>
+        <div class="form-group">
+            <label for="personal_catering">Personal de Catering</label>
+            <select id="personal_catering" name="personal_catering" multiple>
+                <option value="camarero1">Camarero 1</option>
+                <option value="camarero2">Camarero 2</option>
+                <option value="camarero3">Camarero 3</option>
+                <option value="camarero4">Camarero 4</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="menu_seleccion">Selección de Menú</label>
+            <select id="menu_seleccion" name="menu_seleccion" multiple>
+                <option value="plato1">Plato 1</option>
+                <option value="plato2">Plato 2</option>
+                <option value="plato3">Plato 3</option>
+                <option value="plato4">Plato 4</option>
+            </select>
+        </div>
+        <div class="summary">
+            <h3>Platos Seleccionados</h3>
+            <p>Plato 1 - Cantidad: 10 - Precio: $1000</p>
+            <p>Plato 2 - Cantidad: 5 - Precio: $500</p>
+            <p class="total-price">Precio Total: $1500</p>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="confirm-btn">Confirmar</button>
+            <button type="button" class="back-btn">Regresar</button>
+        </div>
+    </div>
+</body>
+</html>
